@@ -15,13 +15,22 @@ router.get('/', function(req, res) {
 /* Create a new note */
 router.post('/', function(req, res) {
     noteController.create(req, res);
-
+    
 });
 
 
+/* Delete a note */
 router.delete('/:id', function(req, res) {
     console.log('access to delete action with id: ', req.params.id );
     noteController.destroy(req, res);
 });
+
+/* Update a note */
+router.put('/:id', function(req, res) {
+    console.log('access to updated action with id: ', req.params.id );
+    noteController.updateNote;
+});
+
+
 
 export default router;
